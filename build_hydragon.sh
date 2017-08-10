@@ -89,7 +89,6 @@ function make_zip {
 
 DATE_START=$(date +"%s")
 
-
 echo -e "${green}"
 echo "--------------------------------------------------------"
 echo "Welcome $USER !   Initiating To Compile $BASE_hydragon_VER$VER    "
@@ -107,10 +106,19 @@ case "$echoice" in
 
 	1 )
 		export CROSS_COMPILE=${HOME}/development/toolchains/aarch64-linux-android-7.0-UBERTC/bin/aarch64-linux-android-
-		STRIP=${HOME}/development/toolchains/aarch64-linux-android-6.0-UBERTC/bin/aarch64-linux-android-strip
+		STRIP=${HOME}/development/toolchains/aarch64-linux-android-7.0-UBERTC/bin/aarch64-linux-android-strip
 		TC="UBERTC-7.0"
 		echo
 		echo "Compiling $KERNEL_NAME Using UBERTC-7.0 Toolchain"
+		break
+		;;
+		
+	2 )
+		export CROSS_COMPILE=${HOME}/development/toolchains/aarch64-linux-android-4.9-UBERTC/bin/aarch64-linux-android-
+		STRIP=${HOME}/development/toolchains/aarch64-linux-android-4.9-UBERTC/bin/aarch64-linux-android-strip
+		TC="UBERTC-4.9"
+		echo
+		echo "Compiling $KERNEL_NAME Using UBERTC-4.9 Toolchain"
 		break
 		;;
 
