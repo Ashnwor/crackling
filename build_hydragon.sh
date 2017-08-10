@@ -100,6 +100,8 @@ while read -p "Plese Select Desired Toolchain for compiling $KERNEL_NAME
 
 UBERTC-7.0---->(1)
 
+UBERTC-4.9---->(2)
+
 " echoice
 do
 case "$echoice" in
